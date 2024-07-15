@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>👸Feliz cumpleaños🌹</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f09797; /* Color de fondo */
+}
+
+.container {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
+
+h1 {
+    color: #ff6347;
+    margin-bottom: 20px;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"] {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 80%;
+    max-width: 300px;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 8px 20px;
+    background-color: #ff6347;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff483a;
+}
+
+.hidden {
+    display: none;
+}
+
+#message {
+    color: #333;
+}
+
+.gif {
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <img class="gif" src="cami1.gif" alt="GIF Izquierda">
+  <img class="gif" src="cami2.gif" alt="GIF Derecha">
+  <h1> ❤️Cami❤️</h1>
+  <form id="nameForm">
+    <label for="name">Ingresa la palabra secreta</label><br>
+    <input type="text" id="name" name="name" required><br>
+    <button type="submit">Enviar</button>
+  </form>
+  <div id="message" class="hidden">
+    <p id="greeting">¡Buenas noches<span id="outputName">linda</span>!</p>
+    <p id="birthdayWishes"></p>
+    <p>Holis linda, primero que nada, disculpa por la hora, pero no pensé que era hoy tu HB (me olvidé o no me dijiste una de dos xd) Bueno ahora sí, espero que este día haya sido tan especial y maravilloso como tú lo eres (la pasaba en su habitación por pena ahq). </p>
+    <p>Gracias por todo el tiempo que pasas jugando conmigo, créeme que la paso muy bien con vos</p> 
+    <p>Agradezco conocerte ese día en murder, sobre todo gracias por ponerte ese nombre, pude reconocer a una army ahq jsjsj</p>
+    <p>Usualmente no suelo hablar mucho con “personas”, pero me siento cómodo haciéndolo contigo, espero poder seguir conociéndote y tirarte mucho hate 24/7 </p>
+    <p>Que tengas un día genial, lleno de risas y buena compañía. Te mereces lo mejor hoy y siempre. </p>
+    <p>Que este nuevo año de vida te traiga muchísimas alegrías, éxitos y momentos inolvidables. </p>
+    <p>Disfruta mucho tu día o bueno, lo que queda de el xd, rodeada de las personas que te quieren y aprecian mucho (ósea yo ahre). </p>
+    <p>Te mando un fuerte abrazo, tqm💜 y disculpa si no es la gran cosa pero quería darte algo uu, bendiciones y no de las que caminan. </p>
+
+
+    <br>💜 ¡Feliz cumpleaños! 💜
+  </div>
+</div>
+
+<script>
+    document.getElementById("nameForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+        var name = document.getElementById("name").value.trim();
+        var greeting = document.getElementById("greeting");
+        var message = document.getElementById("message");
+        var outputName = document.getElementById("outputName");
+        var birthdayWishes = document.getElementById("birthdayWishes");
+        // Cambios en la condición para aceptar "Dar 03" sin importar mayúsculas o minúsculas
+        if (name.toLowerCase() === "army") {
+            outputName.textContent = "Army"; // Usar el nombre ingresado
+            greeting.textContent = "¡Buenas noches linda!";
+            birthdayWishes.style.display = "block";
+            message.classList.remove("hidden");
+        } else {
+            alert("No eres Cami. La página se cerrará.");
+            window.close(); // Cerrar la página
+        }
+        document.getElementById("name").value = "";
+    });
+    </script>
+<div>
+    <audio id="audio" src="cami.mp3" type="audio/mpeg"></audio>
+  </div>
+  <script>
+    document.body.addEventListener('click', function() {
+      var audio = document.getElementById('audio');
+      audio.play();
+    });
+    </script>
+<script defer src="https://app.embed.im/snow.js"></script> 
+</body>
+</html>
